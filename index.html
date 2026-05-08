@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grupo SINAMEC — Sistemas integrales de Normalización, Automatización, Mantenimiento, Energía y Control. Ingeniería industrial de alto nivel." />
+  <title>Grupo SINAMEC</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════ -->
+<nav id="main-navbar" class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+
+    <button class="navbar-brand" onclick="navigate('inicio')">
+      <span class="brand-logo-wrap">
+        <img src="images/sinamec_logo.jpeg" alt="Ícono SINAMEC" class="brand-logo-icon" />
+        <span class="brand-logo-text">
+          <span class="brand-sub">Grupo</span>
+          <span class="brand-name">SINAMEC<span style="color:var(--gold)">.</span></span>
+        </span>
+      </span>
+    </button>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto gap-1 py-2 py-lg-0">
+        <li class="nav-item"><button class="nav-link" data-page="inicio"        onclick="navigate('inicio')">Inicio</button></li>
+        <li class="nav-item"><button class="nav-link" data-page="portafolio"    onclick="navigate('portafolio')">Portafolio</button></li>
+        <li class="nav-item"><button class="nav-link" data-page="capacidades"   onclick="navigate('capacidades')">Capacidades</button></li>
+        <li class="nav-item"><button class="nav-link" data-page="contacto"      onclick="navigate('contacto')">Contacto</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════════════
+     VISTAS
+════════════════════════════════════════════════════════ -->
+<div id="app">
+
+  <!-- ── INICIO ─────────────────────────────────────────── -->
+  <div id="page-inicio" class="page-view active">
+    <div class="container py-5">
+
+      <!-- Hero -->
+      <div class="hero-section mb-5">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-glow"></div>
+
+        <div class="row align-items-center hero-content g-5">
+          <div class="col-lg-6">
+            <div class="hero-eyebrow">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Empresa Mexicana
+            </div>
+
+            <h1 class="hero-title">Soluciones de<br><em>Ingeniería</em><br>En control y <br>automatización.</h1>
+
+            <p class="hero-lead">Sistemas Integrales de Normalización, Automatización, Mantenimiento, Energía y Control.<br> Integramos sistemas robustos que optimizan procesos y reducen costos operativos.</p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <button class="btn-gold" onclick="navigate('portafolio')">
+                Propuestas Técnicas
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
+              <button class="btn-ghost-white" onclick="navigate('contacto')">
+                Contactar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </button>
+            </div>
+
+            <div class="hero-stats">
+   <div class="stat-item">
+  <span class="stat-number">
+    <i class="fas fa-lock"></i>
+  </span>
+  <span class="stat-label">Seguro</span>
+</div>
+
+<div class="stat-item">
+  <span class="stat-number">
+    <i class="fas fa-bolt"></i>
+  </span>
+  <span class="stat-label">Innovador</span>
+</div>
+
+<div class="stat-item">
+  <span class="stat-number">
+    <i class="fas fa-user-tie"></i>
+  </span>
+  <span class="stat-label">Profesional</span>
+</div>
+
+<div class="stat-item">
+  <span class="stat-number">
+    <i class="fas fa-check-circle"></i>
+  </span>
+  <span class="stat-label">Certificado</span>
+</div>
+
+<div class="stat-item">
+  <span class="stat-number">
+    <i class="fas fa-cogs"></i>
+  </span>
+  <span class="stat-label">Eficiente</span>
+</div>
+
+             
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="hero-panel">
+              <h4>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/>
+                  <rect x="9" y="9" width="6" height="6"/>
+                </svg>
+                Áreas de especialidad
+              </h4>
+              <div class="service-chip">
+                <span class="chip-dot"></span>
+                <span>Normalización &amp; Cumplimiento NOM</span>
+              </div>
+              <div class="service-chip">
+                <span class="chip-dot"></span>
+                <span>Automatización Industrial PLC/SCADA</span>
+              </div>
+              <div class="service-chip">
+                <span class="chip-dot"></span>
+                <span>Mantenimiento Predictivo &amp; Correctivo</span>
+              </div>
+              <div class="service-chip">
+                <span class="chip-dot"></span>
+                <span>Sistemas de Energía &amp; Eficiencia</span>
+              </div>
+              <div class="service-chip">
+                <span class="chip-dot"></span>
+                <span>Control de Procesos &amp; Instrumentación</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="row g-3 mb-2">
+        <div class="col-12">
+          <h3 class="fw-bold mb-4" style="font-size:1.1rem">Nuestros pilares</h3>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sn-card p-4 h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h5 class="fw-bold mb-2" style="font-size:.95rem">Confiabilidad</h5>
+            <p class="text-secondary mb-0" style="font-size:.82rem;line-height:1.65">Entregamos resultados medibles y cumplimos con los más altos estándares de calidad en cada proyecto.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sn-card p-4 h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h5 class="fw-bold mb-2" style="font-size:.95rem">Innovación</h5>
+            <p class="text-secondary mb-0" style="font-size:.82rem;line-height:1.65">Adoptamos las tecnologías más avanzadas en automatización e instrumentación para maximizar eficiencia.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sn-card p-4 h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h5 class="fw-bold mb-2" style="font-size:.95rem">Equipo experto</h5>
+            <p class="text-secondary mb-0" style="font-size:.82rem;line-height:1.65">Ingenieros especializados en cada disciplina, con certificaciones nacionales e internacionales.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sn-card p-4 h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h5 class="fw-bold mb-2" style="font-size:.95rem">Soporte continuo</h5>
+            <p class="text-secondary mb-0" style="font-size:.82rem;line-height:1.65">Acompañamos a nuestros clientes antes, durante y después de cada implementación.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /inicio -->
+
+
+  <!-- ── PORTAFOLIO ─────────────────────────────────────── -->
+  <div id="page-portafolio" class="page-view">
+    <div class="container py-5">
+
+      <div class="section-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+        Portafolio de Proyectos
+      </div>
+      <h2 class="section-title mb-3">Soluciones reales<br>para industrias reales.</h2>
+      <p class="section-lead mb-5">Casos de éxito que demuestran nuestra capacidad de integrar sistemas complejos con resultados medibles.</p>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sn-card portfolio-card h-100">
+            <div class="portfolio-card-img">
+              <div class="proj-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+                </svg>
+              </div>
+              <span class="proj-tag">AUTOMATIZACIÓN</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h5>Sistema SCADA para Planta Embotelladora</h5>
+              <p>Implementación de sistema de supervisión y control en tiempo real para línea de producción de 24 horas continuas, reduciendo paros no programados en 62%.</p>
+              <div>
+                <span class="tech-pill">Siemens S7-1500</span>
+                <span class="tech-pill">WinCC</span>
+                <span class="tech-pill">OPC-UA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sn-card portfolio-card h-100">
+            <div class="portfolio-card-img" style="background:linear-gradient(135deg,#065f46,#059669)">
+              <div class="proj-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <span class="proj-tag">ENERGÍA</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h5>Auditoría y Optimización Energética</h5>
+              <p>Diagnóstico completo y rediseño del sistema eléctrico de un complejo industrial de 8,000 m², logrando ahorro del 28% en consumo mensual.</p>
+              <div>
+                <span class="tech-pill">Analizadores de red</span>
+                <span class="tech-pill">VFD</span>
+                <span class="tech-pill">NOM-029</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sn-card portfolio-card h-100">
+            <div class="portfolio-card-img" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">
+              <div class="proj-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                </svg>
+              </div>
+              <span class="proj-tag">CONTROL</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h5>Control de Temperatura en Planta Química</h5>
+              <p>Diseño e implementación de lazos de control PID para reactores de proceso continuo, mejorando la precisión de temperatura a ±0.5°C.</p>
+              <div>
+                <span class="tech-pill">Honeywell HC900</span>
+                <span class="tech-pill">HART</span>
+                <span class="tech-pill">Rosemount</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sn-card portfolio-card h-100">
+            <div class="portfolio-card-img" style="background:linear-gradient(135deg,#b45309,#d97706)">
+              <div class="proj-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <span class="proj-tag">MANTENIMIENTO</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h5>Plan de Mantenimiento Predictivo</h5>
+              <p>Implementación de monitoreo por vibración, temperatura y ultrasonido para 240 activos críticos en planta automotriz, reduciendo fallas en 75%.</p>
+              <div>
+                <span class="tech-pill">Termografía IR</span>
+                <span class="tech-pill">Análisis vibratorio</span>
+                <span class="tech-pill">SAP PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sn-card portfolio-card h-100">
+            <div class="portfolio-card-img" style="background:linear-gradient(135deg,#be123c,#e11d48)">
+              <div class="proj-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <span class="proj-tag">NORMALIZACIÓN</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h5>Certificación NOM y Cumplimiento Regulatorio</h5>
+              <p>Acompañamiento integral para certificación de instalaciones bajo NOM-001, NOM-004 y NOM-029-STPS en empresa farmacéutica de clase mundial.</p>
+              <div>
+                <span class="tech-pill">NOM-001-SEDE</span>
+                <span class="tech-pill">STPS</span>
+                <span class="tech-pill">GMP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="sn-card portfolio-card h-100">
+            <div class="portfolio-card-img" style="background:linear-gradient(135deg,#0e7490,#0891b2)">
+              <div class="proj-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <span class="proj-tag">INTEGRACIÓN</span>
+            </div>
+            <div class="portfolio-card-body">
+              <h5>Red Industrial Ethernet y Fieldbus</h5>
+              <p>Diseño e instalación de infraestructura de comunicación para integración de 5 plantas en un solo sistema de supervisión centralizado.</p>
+              <div>
+                <span class="tech-pill">PROFINET</span>
+                <span class="tech-pill">Modbus TCP</span>
+                <span class="tech-pill">EtherNet/IP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA portafolio -->
+      <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-4 p-4 mt-5 rounded-3" style="border:2px solid var(--blue-mid)">
+        <div>
+          <h5 class="fw-bold mb-1">¿Tienes un proyecto en mente?</h5>
+          <p class="text-secondary mb-0" style="font-size:.875rem">Cuéntanos tu desafío y te preparamos una propuesta personalizada sin costo.</p>
+        </div>
+        <button class="btn-blue flex-shrink-0" onclick="navigate('contacto')">
+          Solicitar propuesta
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div><!-- /portafolio -->
+
+
+  <!-- ── CAPACIDADES ────────────────────────────────────── -->
+  <div id="page-capacidades" class="page-view">
+    <div class="container py-5">
+
+      <div class="section-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        Capacidades &amp; Servicios
+      </div>
+      <h2 class="section-title mb-3">Todo lo que necesitas<br>en un solo socio.</h2>
+      <p class="section-lead mb-5">SINAMEC es el acrónimo de nuestras cinco grandes áreas de servicio, todas integradas bajo un mismo equipo de ingeniería.</p>
+
+      <div class="row g-4 services-grid">
+
+        <div class="col-md-6">
+          <div class="sn-card h-100">
+            <div class="p-4 pb-0">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-badge gold-bg">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="cap-number">S — 01</div>
+                  <h5 class="fw-bold mb-0" style="font-size:.95rem">Sistemas de Normalización</h5>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-2">
+              <ul class="list-unstyled mb-0" style="font-size:.85rem;color:#475569;line-height:2">
+                <li>✔ Auditorías de cumplimiento NOM (001, 004, 022, 029)</li>
+                <li>✔ Dictámenes eléctricos y de seguridad</li>
+                <li>✔ Elaboración de procedimientos e instructivos</li>
+                <li>✔ Capacitación al personal en normativas vigentes</li>
+                <li>✔ Gestión de certificaciones ante organismos reguladores</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="sn-card h-100">
+            <div class="p-4 pb-0">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+                    <line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+                    <line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/>
+                    <line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/>
+                    <line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="cap-number">I — 02</div>
+                  <h5 class="fw-bold mb-0" style="font-size:.95rem">Automatización Industrial</h5>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-2">
+              <ul class="list-unstyled mb-0" style="font-size:.85rem;color:#475569;line-height:2">
+                <li>✔ Programación PLC (Siemens, Allen-Bradley, Schneider)</li>
+                <li>✔ Diseño e implementación de sistemas SCADA/HMI</li>
+                <li>✔ Integración de robots industriales y cobots</li>
+                <li>✔ Sistemas de visión artificial para control de calidad</li>
+                <li>✔ Redes industriales PROFINET, EtherNet/IP, Modbus</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="sn-card h-100">
+            <div class="p-4 pb-0">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-badge gold-bg">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="cap-number">N — 03</div>
+                  <h5 class="fw-bold mb-0" style="font-size:.95rem">Mantenimiento Industrial</h5>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-2">
+              <ul class="list-unstyled mb-0" style="font-size:.85rem;color:#475569;line-height:2">
+                <li>✔ Mantenimiento preventivo y correctivo de equipos</li>
+                <li>✔ Termografía infrarroja y análisis de vibraciones</li>
+                <li>✔ Análisis de aceites y ultrasonido industrial</li>
+                <li>✔ Gestión de activos con software CMMS</li>
+                <li>✔ Planes de mantenimiento RCM y TPM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="sn-card h-100">
+            <div class="p-4 pb-0">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-badge">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="cap-number">A — 04</div>
+                  <h5 class="fw-bold mb-0" style="font-size:.95rem">Energía &amp; Eficiencia</h5>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 pt-2">
+              <ul class="list-unstyled mb-0" style="font-size:.85rem;color:#475569;line-height:2">
+                <li>✔ Auditorías energéticas y dictámenes NOM-029</li>
+                <li>✔ Sistemas fotovoltaicos industriales</li>
+                <li>✔ Corrección de factor de potencia</li>
+                <li>✔ Variadores de frecuencia y motores eficientes</li>
+                <li>✔ Monitoreo y gestión de energía en tiempo real</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="sn-card h-100">
+            <div class="p-4 pb-0">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="icon-badge gold-bg">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="cap-number">M — 05</div>
+                  <h5 class="fw-bold mb-0" style="font-size:.95rem">Control de Procesos &amp; Instrumentación</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row p-4 pt-2 g-0">
+              <div class="col-md-6">
+                <ul class="list-unstyled mb-0" style="font-size:.85rem;color:#475569;line-height:2">
+                  <li>✔ Diseño de lazos de control PID avanzado</li>
+                  <li>✔ Selección e instalación de instrumentos (transmisores, válvulas)</li>
+                  <li>✔ Calibración de instrumentos y pruebas funcionales</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled mb-0" style="font-size:.85rem;color:#475569;line-height:2">
+                  <li>✔ Interlock de seguridad y sistemas SIS</li>
+                  <li>✔ Diagramas P&amp;ID y documentación técnica</li>
+                  <li>✔ Integración con sistemas DCS y MES</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- /capacidades -->
+
+
+ 
+
+
+  <!-- ── CONTACTO ───────────────────────────────────────── -->
+  <div id="page-contacto" class="page-view">
+    <div class="container py-5">
+
+      <div class="section-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Contacto
+      </div>
+      <h2 class="section-title mb-3">Hablemos de<br>tu proyecto.</h2>
+      <p class="section-lead mb-5">Elige el canal que prefieras. Sin formularios complicados ni registros: contacto directo, rápido y efectivo.</p>
+
+      <!-- Acceso rápido WhatsApp y Gmail -->
+      <div class="row g-3 mb-5">
+        <div class="col-md-6">
+          <div class="sn-card contact-info-card h-100">
+            <div class="icon-badge mb-3" style="background:#e7fdf0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+              </svg>
+            </div>
+            <h6>WhatsApp</h6>
+            <div class="val">+52 5661381199</div>
+            <div class="sub mb-3">Respuesta inmediata en horario de oficina</div>
+            <a href="#" class="btn-whatsapp" onclick="openWhatsApp('¡Hola! Quiero saber más sobre los servicios de Grupo SINAMEC.');return false;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+              </svg>
+              Escribir por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="sn-card contact-info-card h-100">
+            <div class="icon-badge mb-3" style="background:#fde8e8">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z" fill="#EA4335"/>
+                <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="1.5" fill="none"/>
+              </svg>
+            </div>
+            <h6>Correo Gmail</h6>
+            <div class="val">contacto@grupsinamec.com</div>
+            <div class="sub mb-3">Respuesta en 24 horas hábiles</div>
+            <a href="mailto:contacto@grupsinamec.com?subject=Consulta%20%E2%80%94%20Grupo%20SINAMEC&body=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." class="btn-gmail">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z" fill="white" opacity=".2"/>
+                <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="1.8" fill="none"/>
+              </svg>
+              Enviar correo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario de contacto directo -->
+      <div class="sn-card p-4 p-md-5 mb-5">
+        <h5 class="fw-bold mb-1">Formulario de contacto</h5>
+        <p class="text-secondary mb-4" style="font-size:.875rem">Completa los datos y te contactamos directo por WhatsApp o Gmail — sin registro, sin backend.</p>
+
+        <form id="contact-form" novalidate>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="cname" class="form-label">Nombre completo</label>
+              <input type="text" id="cname" class="form-control" placeholder="Tu nombre" required />
+            </div>
+            <div class="col-md-6">
+              <label for="ccompany" class="form-label">Empresa</label>
+              <input type="text" id="ccompany" class="form-control" placeholder="Nombre de tu empresa" />
+            </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="cemail" class="form-label">Correo electrónico</label>
+              <input type="email" id="cemail" class="form-control" placeholder="correo@empresa.com" required />
+            </div>
+            <div class="col-md-6">
+              <label for="cservice" class="form-label">Servicio de interés</label>
+              <select id="cservice" class="form-control form-select">
+                <option value="">Selecciona un servicio...</option>
+                <option>Normalización</option>
+                <option>Automatización Industrial</option>
+                <option>Mantenimiento Industrial</option>
+                <option>Energía y Eficiencia</option>
+                <option>Control de Procesos</option>
+                <option>Proyecto integral</option>
+               <option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="cmessage" class="form-label">Mensaje</label>
+            <textarea id="cmessage" class="form-control" rows="4" placeholder="Describe brevemente tu proyecto o necesidad..."></textarea>
+          </div>
+
+          <!-- Canal de respuesta -->
+          <div class="mb-4">
+            <label class="form-label d-block">Enviar via</label>
+            <div class="d-flex gap-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="channel" id="ch-wa" value="whatsapp" checked />
+                <label class="form-check-label fw-semibold" for="ch-wa" style="font-size:.875rem">WhatsApp</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="channel" id="ch-gm" value="gmail" />
+                <label class="form-check-label fw-semibold" for="ch-gm" style="font-size:.875rem">Gmail</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-blue">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            Enviar mensaje
+          </button>
+          <div id="form-alert" style="display:none"></div>
+        </form>
+      </div>
+
+      <!-- Dirección -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="sn-card contact-info-card h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue-mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h6>Ubicación</h6>
+            <div class="val">Ciudad de México</div>
+            <div class="sub">México</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sn-card contact-info-card h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue-mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h6>Horario de atención</h6>
+            <div class="val">Lunes a Viernes</div>
+            <div class="sub">8:00 – 18:00 hrs (CST)</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sn-card contact-info-card h-100">
+            <div class="icon-badge mb-3">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue-mid)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.62a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <h6>Teléfono</h6>
+            <div class="val">+52 55 1234 5678</div>
+            <div class="sub">También por WhatsApp</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /contacto -->
+
+</div><!-- /#app -->
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer id="main-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+          <div class="footer-brand" style="text-align:center;">
+          <img src="images/logo-sinamec.png" alt="Grupo SINAMEC" style="height:52px;width:auto;filter:brightness(1) invert(1);" />
+        </div>
+        <p class="footer-tagline">Sistemas integrales de Normalización, Automatización, Mantenimiento, Energía y Control.</p>
+      </div>
+      <div class="col-md-2">
+        <div class="footer-heading">Empresa</div>
+        <ul>
+          <li><button onclick="navigate('inicio')">Inicio</button></li>
+          <li><button onclick="navigate('portafolio')">Portafolio</button></li>
+          <li><button onclick="navigate('capacidades')">Capacidades</button></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <div class="footer-heading">Servicios</div>
+        <ul>
+          <li><button onclick="navigate('capacidades')">Normalización</button></li>
+          <li><button onclick="navigate('capacidades')">Automatización</button></li>
+          <li><button onclick="navigate('capacidades')">Energía</button></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="footer-heading">Contacto directo</div>
+        <div class="d-flex flex-column gap-2">
+          <a href="#" onclick="openWhatsApp();return false;" class="btn-whatsapp" style="font-size:.8rem;padding:8px 16px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="mailto:contacto@grupsinamec.com?subject=Consulta%20%E2%80%94%20Grupo%20SINAMEC&body=Hola%2C%20quiero%20saber%20m%C3%A1s%20al%20respecto." class="btn-gmail" style="font-size:.8rem;padding:8px 16px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="4" width="20" height="16" rx="2" fill="white" opacity=".25"/>
+              <polyline points="22,6 12,13 2,6" stroke="white" stroke-width="1.8" fill="none"/>
+            </svg>
+            Gmail
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider" />
+    <div class="footer-copy text-center">
+      © 2026 Grupo SINAMEC. Todos los derechos reservados. — México
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════
+     BOTÓN FLOTANTE WhatsApp (FAB)
+════════════════════════════════════════════════════════ -->
+<a href="#" id="whatsapp-fab" aria-label="Contactar por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+<div id="whatsapp-fab-tooltip">¡Quiero saber más!</div>
+
+<!-- Bootstrap 5 JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Lógica personalizada -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
